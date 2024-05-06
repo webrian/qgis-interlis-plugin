@@ -61,11 +61,11 @@ class InterlisProvider(QgsProcessingProvider):
         ProcessingConfig.addSetting(
             Setting(self.getDescription(), IliUtils.ILI2PG_JAR,
                     "ili2pg.jar path",
-                    os.path.join(jarpath, "ili2pg.jar")))
+                    os.path.join(jarpath, "ili2pg-5.1.0.jar")))
         ProcessingConfig.addSetting(
             Setting(self.getDescription(), IliUtils.ILI2GPKG_JAR,
                     "ili2gpkg.jar path",
-                    os.path.join(jarpath, "ili2gpkg.jar")))
+                    os.path.join(jarpath, "ili2gpkg-5.1.0.jar")))
 
     def unload(self):
         QgsProcessingProvider.unload(self)
