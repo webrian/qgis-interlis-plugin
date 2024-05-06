@@ -408,6 +408,7 @@ class Ili2PgImportAlgorithm(QgsProcessingAlgorithm):
         ili2dbargs.extend(["--dbschema", dbschema])
 
         xtf = parameters.get(self.XTF)
+        ili2dbargs.extend(["--log", "%s.log" % xtf])
         ili2dbargs.append(xtf)
 
         IliUtils.runJava(
@@ -488,6 +489,7 @@ class Ili2PgExportAlgorithm(QgsProcessingAlgorithm):
             ili2dbargs.extend(["--models", models])
 
         xtf = parameters.get(self.OUTPUT)
+        ili2dbargs.extend(["--log", "%s.log" % xtf])
         ili2dbargs.append(xtf)
 
         IliUtils.runJava(

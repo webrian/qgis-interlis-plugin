@@ -57,6 +57,9 @@ class Interlis:
         # Processing provider
         self.provider = InterlisProvider()
 
+    def initProcessing(self):
+        QgsApplication.processingRegistry().addProvider(self.provider)
+
     def initGui(self):
         # Create action that will start plugin configuration
         self.action = QAction(
